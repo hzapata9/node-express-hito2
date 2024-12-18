@@ -1,0 +1,10 @@
+INSERT INTO public.player (id_player, "name", "number", address, team) VALUES(uuid_generate_v4(), 'Lebron James', 23, 'Los Angeles 123', 'Lakers');
+INSERT INTO public.player (id_player, "name", "number", address, team) VALUES(uuid_generate_v4(), 'Anthony Davis', 3, 'Los Angeles 999', 'Lakers');
+INSERT INTO public.player (id_player, "name", "number", address, team) VALUES(uuid_generate_v4(), 'Jason Tatum', 0, 'San Juan Av 22', 'Celtics');
+INSERT INTO public.player (id_player, "name", "number", address, team) VALUES(uuid_generate_v4(), 'Jalen Brown', 7, 'St John Av 77', 'Celtics');
+INSERT INTO public.player (id_player, "name", "number", address, team) VALUES(uuid_generate_v4(), 'Josh Hart', 3, 'Big apple 100', 'Knicks');
+INSERT INTO public.player (id_player, "name", "number", address, team) VALUES(uuid_generate_v4(), 'Jalen Brunson', 11, 'Rucker Park 111', 'Knicks');
+INSERT INTO public.player (id_player, "name", "number", address, team) VALUES(uuid_generate_v4(), 'Luca Doncic', 77, 'Calle 1', 'Mavs');
+INSERT INTO public.player (id_player, "name", "number", address, team) VALUES(uuid_generate_v4(), 'Kyrie Irving', 11, 'North Avenue 500', 'Mavs');
+INSERT INTO public.player (id_player, "name", "number", address, team) VALUES(uuid_generate_v4(), 'Jimmy Butler', 22, 'Collins Av 900', 'Heat');
+INSERT INTO public.player (id_player, "name", "number", address, team) VALUES(uuid_generate_v4(), 'Bam Adebayo', 13, 'Lincoln Road 8300', 'Heat');

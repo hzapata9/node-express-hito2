@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Lakers",
+    "city": "Los Angeles",
+    "owner": "Jerry Buss",
+    "password": "purpleandgold"
+  },
+  {
+    "name": "Celtics",
+    "city": "Boston",
+    "owner": "Wycliffe Grousbeck",
+    "password": "greenandwhite"
+  },
+  {
+    "name": "Knicks",
+    "city": "New York",
+    "owner": "James Dolan",
+    "password": "blueandorange"
+  },
+  {
+    "name": "Jazz",
+    "city": "Utah",
+    "owner": "Pepe Mario",
+    "password": "whitebrown"
+  },
+  {
+    "name": "Jazz",
+    "city": "Utah",
+    "owner": "Pepe Mario",
+    "password": "whitebrown"
+  }
+]

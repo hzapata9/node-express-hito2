@@ -10,10 +10,21 @@ app.get("/", (req, res) => {
     res.status(200).json( {ok: true});
 });
 
-describe("test express", () => {
+app.get("/create", (req, res) => {
+    res.status(200).json( {ok: true});
+});
 
+
+describe("test express", () => {
     it("Get / should return code 200", async() => {
         const response = await supertest(app).get("/");
+        const statusCode = response.statusCode;
+
+        expect(statusCode).toBe(200);
+    });
+
+    it("Get /create should return code 200", async() => {
+        const response = await supertest(app).get("/create");
         const statusCode = response.statusCode;
 
         expect(statusCode).toBe(200);

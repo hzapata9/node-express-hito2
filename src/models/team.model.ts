@@ -1,7 +1,7 @@
 import {readFile, writeFile} from "node:fs/promises";
 import path from "node:path";
 import {Team} from "../interfaces/team.interface";
-import { pool } from "../config/database";
+import { pool } from "../config/database_back";
 
 
 const __dirname = import.meta.dirname;

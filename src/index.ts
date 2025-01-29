@@ -1,40 +1,29 @@
 import express from "express";
+import { sequelize } from "./config/sequelize";
 import teamRouter from "./routes/team.route";
-import authRouter from "./routes/auth.route"
-import { pool } from "./config/database"
-import rateLimit from "express-rate-limit";
+import playerRouter from "./routes/player.route";
 
 const app = express();
-const port = process.env.PORT || 3000;
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// Configurar el limitador
-const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutos
-    max: 100, // Límite de 100 peticiones por IP
-    message:
-      "Demasiadas solicitudes desde esta IP, por favor inténtalo más tarde.",
-    standardHeaders: true, // Informa el límite en las cabeceras `RateLimit-*`
-    legacyHeaders: false, // Desactiva las cabeceras `X-RateLimit-*`
-  });
-// Aplicar el limitador globalmente
-app.use(limiter);
+const PORT = 3000;
 
 app.use("/api/v1/teams", teamRouter);
-app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/players", playerRouter);
 
-const main = async() => {
+
+const main = async () => {
     try {
-        const response = await pool.query('SELECT NOW()');
-        console.log("Time DB: ", response.rows);
-
-        app.listen(3000, () => {
-            console.log("\nServer is running on Port:" + port);
-        });
-    } catch(error) {
-        console.log(error);
+        await sequelize.authenticate();
+        
+        // force: true => elimina las tablas
+        await sequelize.sync({ force: true });
+        
+        console.log("Conexión a la base de datos realizada correctamente");
+        //app.listen(3000, console.log("Servidor levantado en el puerto 3000"));
+        app.listen(PORT, () => {
+            console.log(`\nServer is running on http://localhost:${PORT}`);
+          });
+    } catch (error) {
+        console.log("No se pudo conectar a la base de datos", error);
     }
 };
 

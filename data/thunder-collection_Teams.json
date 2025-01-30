@@ -1,0 +1,103 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "TeamsNBA",
+    "collectionId": "a20e2693-7125-45d0-aebf-6a3569869e18",
+    "dateExported": "2025-01-30T22:38:43.763Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "03e920c8-c852-42f8-8730-9f2b7a2b2833",
+            "colId": "a20e2693-7125-45d0-aebf-6a3569869e18",
+            "containerId": "",
+            "name": "GetAllTeams",
+            "url": "http://localhost:3000/api/v1/teams",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-12-12T04:12:07.875Z",
+            "modified": "2024-12-12T04:12:24.072Z",
+            "headers": []
+        },
+        {
+            "_id": "a640c2bc-61c4-40f5-9493-fb525d4a549d",
+            "colId": "a20e2693-7125-45d0-aebf-6a3569869e18",
+            "containerId": "",
+            "name": "CreateTeam",
+            "url": "http://localhost:3000/api/v1/teams/create",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-12-12T04:16:02.691Z",
+            "modified": "2024-12-18T04:39:12.529Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Jazz\",\n  \"city\": \"Utah\",\n  \"owner\": \"Pepe Mario\",\n  \"password\": \"whitebrown\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b78a36f4-d935-4201-8cba-2d5ae8c96546",
+            "colId": "a20e2693-7125-45d0-aebf-6a3569869e18",
+            "containerId": "",
+            "name": "GetTeamByName",
+            "url": "http://localhost:3000/api/v1/teams/Celtics",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-12-18T04:06:09.130Z",
+            "modified": "2024-12-19T02:47:22.775Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Celtics\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "85fb6dc4-3e77-407d-87c1-353a058112a7",
+            "colId": "a20e2693-7125-45d0-aebf-6a3569869e18",
+            "containerId": "",
+            "name": "AuthLogin",
+            "url": "http://localhost:3000/api/v1/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-12-12T05:17:22.614Z",
+            "modified": "2024-12-19T02:47:40.014Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Celtics\",\n  \"password\": \"grennandwhite\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "4bf48de0-c346-4e40-9bfb-ef83fe6e9aa4",
+            "colId": "a20e2693-7125-45d0-aebf-6a3569869e18",
+            "containerId": "",
+            "name": "UpdateTeamByName",
+            "url": "http://localhost:3000/api/v1/teams/Lakers",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-12-18T04:18:05.974Z",
+            "modified": "2024-12-19T02:30:40.173Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Lakers\",\n  \"city\": \"Los Angeles CA\",\n  \"owner\": \"Jerry Buss\",\n  \"password\": \"purpleandyellow\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "d966f799-e66b-4b9c-85fe-2d5e5f964713",
+            "colId": "a20e2693-7125-45d0-aebf-6a3569869e18",
+            "containerId": "",
+            "name": "DeleteTeamByName",
+            "url": "http://localhost:3000/api/v1/teams/Jazz",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-12-18T04:34:26.072Z",
+            "modified": "2024-12-18T04:46:06.341Z",
+            "headers": []
+        }
+    ],
+    "ref": "QeVUIUa9roAtB2YNwA-8egw7bdWv8TNKsGzdsxakv5MxvDhC5PCHrdngRavwt6iH8ViIoukU5TmjKYDaS4Sz-w"
+}

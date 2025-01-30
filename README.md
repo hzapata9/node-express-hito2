@@ -108,6 +108,10 @@ CREATE TABLE PLAYER (
 ```sh
  npm run dev
 ```
+2.Test Endpoint file collection for Thunder Client
+
+https://github.com/hzapata9/node-express-hito2/blob/node-express-hito4/data/thunder-collection_Teams.json
+
 
 ## Authors
 

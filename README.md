@@ -24,8 +24,11 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
  
 --Npm 
+
 --Postgres 
+
 --Text editor (VsCode) 
+
 --DBeaver (database manager) 
 
 ### Install

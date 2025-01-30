@@ -61,7 +61,7 @@ CREATE TABLE PLAYER (
 ```
 
 3. Json for Team
-
+```Json
 [
   {
     "name": "Lakers",
@@ -94,6 +94,7 @@ CREATE TABLE PLAYER (
     "password": "greenwhite"
   }
 ]
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

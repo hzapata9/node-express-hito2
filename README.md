@@ -1,44 +1,42 @@
 <a name="readme-top"></a>
 
-# node-express-hito2
+# node-express-hito2 ( Hito 4)
 
-> Description.
+> Aplicacion Node y Express con Sequelize
 
 ## Built With
 
-- Html
-- Css
-- JavaScript
-- Vue 
+- Node
+- Express
+- Typescript
+- Sequelize
+- Postgres
 
 
-## Live Demo (if available)
+## Live Demo
 
-[Portfolio](https://gioudi.github.io/repository)
+ No Available
 
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-
---Node 
+ 
 --Npm 
---Composer 
+--Postgres
 --Text editor (VsCode)
+--DBeaver (database manager)
 
 ### Install
 
 1. Clone the repo
    ```sh
-   git clone git@github.com:gioudi/repository.git
+   git clone [git@github.com:gioudi/repository.git](https://github.com/hzapata9/node-express-hito2.git)
    ```
 2. Install NPM packages
    ```sh
    npm install
-   ```
-   ```sh
-   yarn install
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -48,15 +46,14 @@ To get a local copy up and running follow these simple example steps.
 1.Run project
 
 ```sh
- npm run serve
+ npm run dev
 ```
 
 ## Authors
 
-👤 **Author1**
+👤 **Hector Zapata**
 
-- GitHub: [@user](https://github.com/user)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/user/)
+- GitHub: [@hzapata9] (https://github.com/hzapata9)
 
 ## 🤝 Contributing
 
@@ -66,6 +63,6 @@ Feel free to check the [issues page](https://github.com/use/repository/issues).
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
+--
 
 ## Acknowledgments

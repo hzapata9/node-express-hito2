@@ -49,6 +49,7 @@ const createTeam = async(req: Request, res: Response) => {
 
 const deleteTeam = async(req: Request, res: Response) => {
     const { name } = req.params;
+    console.log("DELETE: ", name);
     try {
         const team = await teamService.deleteTeamByName(name);
         res.json(team);

@@ -34,17 +34,23 @@ const createTeam = async(name: string, city: string, owner: string, password: st
 };
 
 const deleteTeamByName = async(name: string) => {
-    //const team = await teamModel.removeTeam(name);
     const team = await teamModel.findByPk(name);
     console.log("Registro Buscado para Borrar: ", team);
-    if(!team) throw new Error("Team Not Found.");
+    
+    if(!team) {
+        throw new Error("Team Not Found.");
+    } else {
+        const result = await teamModel.destroy({
+            where: { name },
+        });
+    }
     return team;
 };
 
 const updateTeamByName = async(name: string, city: string, owner: string, password: string) => {
-    console.log("DATOS UPDATE: ", name, city)
+    console.log("DATOS UPDATE: ", name, city, owner, password);
     const findTeam = await teamModel.findByPk(name);
-    //console.log("DATOS UPDATE: ", findTeam);
+    console.log("DATOS UPDATE: ", findTeam);
     
     if(!findTeam) {
         throw new Error("Team not found! \n");

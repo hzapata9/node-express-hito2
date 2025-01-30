@@ -20,18 +20,18 @@ export class Player extends Model {
   @Column(DataType.UUID)
   idplayer!: string;
 
-  @Column(DataType.STRING)
   @AllowNull(false)
+  @Column(DataType.STRING)
   name!: string;
 
   @Default(0)
-  @Column(DataType.INTEGER)
   @AllowNull(false)
+  @Column(DataType.INTEGER)
   number!: number;
 
   @Default("Calle 1")
-  @Column(DataType.STRING)
   @AllowNull(false)
+  @Column(DataType.STRING)
   address!: string;
 
   @Default("W/T")
@@ -43,21 +43,22 @@ export class Player extends Model {
 
 @Table
 export class Team extends Model {
+  @PrimaryKey
   @Default("Equipo NN")
-  @Column(DataType.STRING)
   @AllowNull(false)
+  @Column(DataType.STRING)
   name!: string;
 
-  @Column(DataType.STRING)
   @AllowNull(false)
+  @Column(DataType.STRING)
   city!: string;
 
-  @Column(DataType.STRING)
   @AllowNull(false)
+  @Column(DataType.STRING)
   owner!: string;
 
-  @Column(DataType.STRING)
   @AllowNull(false)
+  @Column(DataType.STRING)
   password!: string;
 }
 //

@@ -1,10 +1,11 @@
 import {Request, Response} from "express";
-import { Team } from "../interfaces/team.interface";
 import {teamService} from "../services/team.service";
 
 const getTeams = async(req: Request, res: Response) => {
     try {
+        
         const teams = await teamService.getAllTeams();
+        console.log("Controller getTeams", teams);
         res.json(teams);
     } catch(error) {
         console.log(error);
@@ -62,8 +63,10 @@ const deleteTeam = async(req: Request, res: Response) => {
 };
 
 const updateTeam = async(req: Request, res: Response) => {
+    console.log("updateTeam UPDATE: ", req.body);
     const { name, city, owner, password } = req.body;
     try {
+        console.log("updateTeam UPDATE: ", name, city, owner, password);
         const team = await teamService.updateTeamByName(name, city, owner, password);
         res.json(team);
     } catch(error) {

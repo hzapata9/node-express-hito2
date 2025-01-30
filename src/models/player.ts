@@ -1,8 +1,8 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../config/sequelize";
 
-export const playerModel = sequelize.define("player", {
-  id_player: {
+export const playerModel = sequelize.define("Player", {
+  idplayer: {
     type: DataTypes.UUID,
     primaryKey: true,
   },

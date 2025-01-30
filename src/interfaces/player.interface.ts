@@ -1,5 +1,5 @@
 export interface Player {
-    id_player: string;
+    idplayer: string;
     name: string;
     number: Number;
     address: string;

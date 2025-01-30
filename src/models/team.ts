@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../config/sequelize";
 
-export const teamModel = sequelize.define("team", {
+export const teamModel = sequelize.define("Team", {
   name: {
     type: DataTypes.STRING,
     primaryKey: true,

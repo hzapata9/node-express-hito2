@@ -32,15 +32,16 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo
    ```sh
-   git clone [git@github.com:gioudi/repository.git](https://github.com/hzapata9/node-express-hito2.git)
+   git clone https://github.com/hzapata9/node-express-hito2.git
    ```
 2. Install NPM packages
    ```sh
    npm install
    ```
 3. Script for create Tables
-
+```sql
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
 --DROP TABLE IF EXISTS users; 
 
 CREATE TABLE TEAM (
@@ -57,6 +58,7 @@ CREATE TABLE PLAYER (
     ADDRESS 	VARCHAR(200) NOT null,
     TEAM 		VARCHAR(100) NOT null REFERENCES TEAM(NAME)
 );
+```
 
 3. Json for Team
 

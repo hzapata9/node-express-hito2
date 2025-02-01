@@ -118,17 +118,23 @@ https://github.com/hzapata9/node-express-hito2/blob/node-express-hito4/data/thun
 3.Test Endpoint examples
 
 --Request "GetAllTeams"
+
 --URL: http://localhost:3000/api/v1/teams
+
 --Body: N/A
 
 
 --Request "DeleteTeamByName"  (Deleting Team "Jazz")
+
 --URL: http://localhost:3000/api/v1/teams/Jazz
+
 --Body: N/A
 
 
 --Request "CreateTeam" (Create Team "Jazz")
+
 --URL: http://localhost:3000/api/v1/teams/create
+
 --Body: 
 ```Json
 {
@@ -141,7 +147,9 @@ https://github.com/hzapata9/node-express-hito2/blob/node-express-hito4/data/thun
 
 
 --Request "UpdateTeamByName" (Update Team "Lakers" city)
+
 --URL: http://localhost:3000/api/v1/teams/Lakers
+
 --Body: 
 ```Json
 {

@@ -108,9 +108,15 @@ CREATE TABLE PLAYER (
 ```sh
  npm run dev
 ```
-2.Test Endpoint file collection for Thunder Client
+2.Test Endpoint file collection for Thunder Client 
+(Import in Visual Code, Tab Collection, use option import)
 
 https://github.com/hzapata9/node-express-hito2/blob/node-express-hito4/data/thunder-collection_Teams.json
+
+3.Test Endpoint examples
+
+Request "GetAllTeams"
+URL: http://localhost:3000/api/v1/teams
 
 
 ## Authors

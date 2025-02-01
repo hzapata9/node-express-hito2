@@ -129,7 +129,8 @@ Body: N/A
 
 Request "CreateTeam" (Create Team "Jazz")
 URL: http://localhost:3000/api/v1/teams/create
-Body: ```Json
+Body: 
+```Json
 {
   "name": "Jazz",
   "city": "Utah",

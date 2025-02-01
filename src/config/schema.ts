@@ -5,6 +5,7 @@ import {
   DataType,
   Default,
   ForeignKey,
+  HasMany,
   IsUUID,
   Model,
   PrimaryKey,
@@ -39,6 +40,11 @@ export class Player extends Model {
   @AllowNull(false)
   @Column(DataType.STRING)
   team!: string;
+
+  /*
+  @BelongsTo(() => Team)
+  declare team: Team;
+  */
 }
 
 @Table
@@ -60,6 +66,7 @@ export class Team extends Model {
   @AllowNull(false)
   @Column(DataType.STRING)
   password!: string;
+
+  @HasMany(() => Player)
+  declare players: Player[];
 }
-//
-//

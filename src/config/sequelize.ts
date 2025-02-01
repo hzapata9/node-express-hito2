@@ -6,12 +6,15 @@ import { PostgresDialect } from "@sequelize/postgres";
 const DATABASE_URL = "postgresql://postgres:root@localhost:5432/dbtest";
 
 const url = process.env.DATABASE_URL;
+console.log("process.env.DATABASE_URL: ", url);
 
-export const sequelize = new Sequelize(DATABASE_URL, {
+// validar database url
+
+export const sequelize = new Sequelize(url!, {
     dialect: "postgres",
     models: [Player, Team],
     logging: false,
-  });
+});
 
   //process.loadEnvFile("../../.env");
 /*

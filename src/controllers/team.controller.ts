@@ -3,9 +3,7 @@ import {teamService} from "../services/team.service";
 
 const getTeams = async(req: Request, res: Response) => {
     try {
-        
         const teams = await teamService.getAllTeams();
-        console.log("Controller getTeams", teams);
         res.json(teams);
     } catch(error) {
         console.log(error);
@@ -18,9 +16,7 @@ const getTeams = async(req: Request, res: Response) => {
 
 const getTeamByName = async(req: Request, res: Response) => {
     try {
-        
         const { name } = req.body;
-        console.log("getTeamByName: ", name);
         const team = await teamService.getTeamByName(name);
         res.json(team);
     } catch(error) {
@@ -49,7 +45,6 @@ const createTeam = async(req: Request, res: Response) => {
 
 const deleteTeam = async(req: Request, res: Response) => {
     const { name } = req.params;
-    console.log("DELETE: ", name);
     try {
         const team = await teamService.deleteTeamByName(name);
         res.json(team);
@@ -64,11 +59,10 @@ const deleteTeam = async(req: Request, res: Response) => {
 };
 
 const updateTeam = async(req: Request, res: Response) => {
-    console.log("updateTeam UPDATE: ", req.body);
     const { name, city, owner, password } = req.body;
+    const { newName } = req.params;
     try {
-        console.log("updateTeam UPDATE: ", name, city, owner, password);
-        const team = await teamService.updateTeamByName(name, city, owner, password);
+        const team = await teamService.updateTeamByName(name, newName, city, owner, password);
         res.json(team);
     } catch(error) {
         console.log(error);

@@ -5,7 +5,6 @@ const getAllTeams = async() => {
     
     const teams = await teamModel.findAll();
     console.log("Service getAllTeams", teams);
-    //return await teamModel.findAll();
     return teams;
 };
 
@@ -29,7 +28,6 @@ const createTeam = async(name: string, city: string, owner: string, password: st
     if(newTeam) {
         console.log("Registro Creado: ", newTeam);
     }
-    
     return newTeam;
 };
 
@@ -47,23 +45,26 @@ const deleteTeamByName = async(name: string) => {
     return team;
 };
 
-const updateTeamByName = async(name: string, city: string, owner: string, password: string) => {
-    console.log("DATOS UPDATE: ", name, city, owner, password);
-    const findTeam = await teamModel.findByPk(name);
-    console.log("DATOS UPDATE: ", findTeam);
+const updateTeamByName = async(name: string, newName: string, city: string, owner: string, password: string) => {
+
+    const [updatedCount, updatedTeams] = await teamModel.update(
+        {
+            name: newName,
+            city: city,
+            owner: owner,
+            password: password,
+        },
+        {
+            where: { name },
+            returning: true,
+        }
+    );
     
-    if(!findTeam) {
-        throw new Error("Team not found! \n");
-    } else {
-        findTeam.name = name;
-        findTeam.city = city;
-        findTeam.owner = owner;
-        findTeam.password = password;
-
-        const uTeam = await findTeam.update(findTeam);
+    if (updatedCount === 0) {
+        throw new Error("No se actualizó ningún equipo.");
     }
-
-    return findTeam;
+    
+    return updatedTeams[0];
 };
 
 

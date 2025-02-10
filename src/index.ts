@@ -2,6 +2,7 @@ import express from "express";
 import { sequelize } from "./config/sequelize";
 import teamRouter from "./routes/team.route";
 import playerRouter from "./routes/player.route";
+import authRouter from "./routes/auth.route";
 
 const app = express();
 const PORT = 3000;
@@ -11,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/v1/teams", teamRouter);
 app.use("/api/v1/players", playerRouter);
+app.use("/api/v1/auth", authRouter);
 
 
 const main = async () => {

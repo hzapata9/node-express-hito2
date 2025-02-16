@@ -13,6 +13,7 @@ router.delete("/:name", teamController.deleteTeam);
 
 router.put("/:name", teamController.updateTeam);
 
+/*
 router.use((req, res, next) => {
     console.log("Middleware de Team Route");
     next();
@@ -21,5 +22,6 @@ router.use((req, res, next) => {
   router.get("/logs", (req, res) => {
     res.send("Path Team root");
   });
+*/
 
 export default router;

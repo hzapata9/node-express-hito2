@@ -3,17 +3,19 @@ import { sequelize } from "./config/sequelize";
 import teamRouter from "./routes/team.route";
 import playerRouter from "./routes/player.route";
 import authRouter from "./routes/auth.route";
+import morgan from "morgan";
 
 const app = express();
 const PORT = 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(morgan("dev"));
 
 app.use("/api/v1/teams", teamRouter);
 app.use("/api/v1/players", playerRouter);
 app.use("/api/v1/auth", authRouter);
-
+//app.use("/api", teamRouter);
 
 const main = async () => {
     try {

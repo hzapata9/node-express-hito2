@@ -4,7 +4,7 @@ import { Team } from "../interfaces/team.interface";
 const getAllTeams = async() => {
     
     const teams = await teamModel.findAll();
-    console.log("Service getAllTeams", teams);
+    //console.log("Service getAllTeams", teams);
     return teams;
 };
 
